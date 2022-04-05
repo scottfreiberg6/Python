@@ -29,7 +29,7 @@ students = [
          {'first_name' : 'Mark', 'last_name' : 'Guillen'},
          {'first_name' : 'KB', 'last_name' : 'Tonel'}
     ]
-iterateDictionary
+# iterateDictionary
 def iterateDictionary (some_list):
     for i in range(0, len(students), 1):
         print(f"{i} + {students[i]}")

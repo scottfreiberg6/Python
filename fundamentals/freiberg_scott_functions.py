@@ -51,14 +51,14 @@ dojo = {
    'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
    'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
-def printInfo(key_name,some_dict):
-    for i in range(0,len(dojo),1):
-        if(some_dict=='locations'):
-            print(some_dict,'location')
-        else:
-            print(some_dict,'instructors')
-printInfo('locations', dojo)
-printInfo('instructors', dojo)
+# def printInfo(key_name,some_dict):
+#     for i in range(0,len(dojo),1):
+#         if(some_dict=='locations'):
+#             print(some_dict,'location')
+#         else:
+#             print(some_dict,'instructors')
+# printInfo('locations', dojo)
+# printInfo('instructors', dojo)
 def printInfo(some_dict):
     for key,val in some_dict.items():
         print(f"{len(val)} {key}")

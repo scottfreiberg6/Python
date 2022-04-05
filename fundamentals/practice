@@ -1,0 +1,6 @@
+teamdict ={
+    "Bronx": "Yankees",
+    "Queens": "mets",
+    "Boston": "Red Sox"
+} 
+print (teamdict)

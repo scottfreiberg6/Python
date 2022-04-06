@@ -11,6 +11,12 @@ class User:
     def make_withdrawal(self, amount):
         self.account_balance -= amount
         return self
+        
+    def make_transfer(self, other_user, amount):
+        self.account_balance -= amount
+        other_user.account_balance += amount
+        return self
+            
 
 michael = User("michael", "m@d.com", 0)
 anna = User("anna", "a@d.com", 0)

@@ -1,6 +1,7 @@
 from flask import Flask, render_template, session, redirect, request
-app = Flask(__name__)
 import random
+app = Flask(__name__)
+
 app.secret_key="tunnel"
 
 @app.route('/')
@@ -8,17 +9,19 @@ def number():
     if "number" not in session:
         session ['number'] = random.randint(1, 100)
 
-        return render_template("index.html")
-
-@app.route('/num1', methods=['post'])
+    return render_template("index.html")
+    
+@app.route('/num1', methods=['POST'])
 def guess():
-    count=0
-    if 'num1' in session:
-        session['num1']= int(request.form['num1'])
-        count+=1
+    # count=0
+    # if 'number' in session:
+    #     session['number']= int(request.form['number'])
+    #     count+=1
+   
+    session['guess']= int (request.form['guess']) 
     return redirect ('/')
-
-@app.route ('/reset')
+    
+@app.route('/reset')
 def num_reset():
     session.clear()
     return redirect('/')

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<div class="form-group">
+    <form action='/process' method='post'>
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" name='name'>
+        </div>
+        <div class="form-group">
+            <label for="Location">Dojo City</label>
+            <select class="form-control" id="exampleFormControlSelect1" name='location'>
+                <option>Chicago</option>
+                <option>San Jose</option>
+                <option>Burbank</option>
+                <option>Miami</option>
+                <option>Boston</option>
+            </select>
+        </div>
+        <div class="favorite_language">
+            <label for="Favorite language">Favorite</label>
+            <select class="form-control" id="exampleFormControlSelect1" name='favorite_language'>
+                <option>C#</option>
+                <option>Python</option>
+                <option>Mern</option>
+                <option>Ruby</option>
+                <option>Java</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Comments</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name='comments'></textarea>
+        </div>
+        <input type='submit' value='submit'></input>
+    </form>
+</div>
+
+<body>
+
+</body>
+
+</html>

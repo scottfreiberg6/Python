@@ -10,6 +10,9 @@ def clicker():
     
     if "count" in session:
         session["count"] += 1
+    
+
+
     else:
         session["count"] = 0
     return render_template("index.html", count= session["count"])
@@ -19,6 +22,11 @@ def reset_session():
     session.clear()
     return redirect("/")
 
+@app.route('/2')
+def clicker2():
+# 
+    session["count"] += 1
+    return redirect("/")
 
 if __name__=="__main__":
     app.run(debug=True, port=5001)

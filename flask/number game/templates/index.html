@@ -17,13 +17,13 @@
             <label for="guess">Take a Guess!!!</label>
             <input type="text" name="guess" id="guess" class="form-control">
         </div>
-        <input type="submit" value="guess" class="">
+        <input type="submit" value="guess">
     </form>
-        {% if 'num1' in session: %}
-            {% if session['num1'] == session['number'] %}
+        {% if 'number' in session: %}
+            {% if session['number'] == session['guess'] %}
                 <h2>you got the number</h2>
                 <a href="/reset">Play again</a>
-            {% elif session['num1']< session['number'] %} <h2>To low!!</h2>
+            {% elif session['number']< session['guess'] %} <h2>To low!!</h2>
 </div>
             {%else%}
                 <h2>Too High!!</h2>

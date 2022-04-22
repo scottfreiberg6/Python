@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Reg</title>
+</head>
+
+<body>
+  <a href="/logout">logout</a>
+  <h3>Welcome, {{ user.first_name }} {{ user.last_name }}</h3>
+  <h1>Need a Ride</h1>
+  {% for car in all_cars %}
+  <h3>Color:<a href="/car/show/{{ car.id }}">{{ car.color }}</a></h3>
+  <h3>Number of Seats:{{ car.num_of_seats }}</h3>
+  <h3>Driver:{{car.driver.first_name}}</h3>
+  <h3>
+    {% if user.id == car.driver.id %}
+    <a href="/car/edit/{{ car.id }}">Edit Car</a>
+    <a href="/car/delete/{{ car.id }}">Delete Car</a>
+    {% endif %}
+  </h3>
+
+  {% endfor %}
+
+
+  <a href="/car/new">Add a new Car</a>
+</body>
+
+</html>

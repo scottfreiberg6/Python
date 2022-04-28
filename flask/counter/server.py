@@ -6,7 +6,7 @@ app.secret_key = "tunnel"
 def clicker():
     if 'clicker' in session:
         print('clciker exists')
-    else:print ("key 'clciker'does not exist")
+    else:print ("key 'clicker'does not exist")
     
     if "count" in session:
         session["count"] += 1
